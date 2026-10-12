@@ -19,7 +19,7 @@
 | [DHT11](https://www.digikey.ca/en/products/detail/olimex-ltd/SNS-DHT11/21662551) | Humidity/Temperature sensor | 1 | $4.43 | $4.43 | [DigiKey](https://www.digikey.ca/en/products/detail/olimex-ltd/SNS-DHT11/21662551) |
 | [XIAO-ESP32-C3-SMD](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) | Dev board | 1 | $5.88 | $5.88 | [DigiKey](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) |
 | **Parts subtotal** | — | — | — | **$11.93** | — |
-| **Tax & shipping** | — | — | — | **$17.00** | — |
-| **Total** | — | — | — | **$28.93** | — |
+| **Tax & shipping** | — | — | — | **$18.00** | — |
+| **Total** | — | — | — | **$29.93** | — |
 
-$1.07 left of the tier's funding.
+$0.07 left of the tier's funding.
