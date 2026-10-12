@@ -19,7 +19,7 @@
 | [XIAO-ESP32-C3-SMD](https://ca.robotshop.com/products/seeedstudio-xiao-esp32c3-tiny-mcu-w-wi-fi-ble?variant=42740657782935) | Dev board | 1 | $5.96 | $5.96 | [Robot Shop](https://ca.robotshop.com/products/seeedstudio-xiao-esp32c3-tiny-mcu-w-wi-fi-ble?variant=42740657782935) |
 | [DHT11](https://ca.robotshop.com/products/dht11-temperature-humidity-sensor-module-breakout?variant=42412120277143) | Humidity/Temperature Sensor | 1 | $1.52 | $1.52 | [Robot Shop](https://ca.robotshop.com/products/dht11-temperature-humidity-sensor-module-breakout?variant=42412120277143) |
 | **Parts subtotal** | — | — | — | **$11.54** | — |
-| **Tax & shipping** | — | — | — | **$17.00** | — |
-| **Total** | — | — | — | **$28.54** | — |
+| **Tax & shipping** | — | — | — | **$0.00** | — |
+| **Total** | — | — | — | **$11.54** | — |
 
-$1.46 left of the tier's funding.
+$18.46 left of the tier's funding.
