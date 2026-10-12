@@ -16,7 +16,6 @@
 | Conn_01x08_Pin | — | 1 | $0.00 | $0.00 | — |
 | 10K | — | 1 | $0.00 | $0.00 | — |
 | SW_Push | — | 1 | $0.00 | $0.00 | — |
-| SW_Push | — | 1 | $0.00 | $0.00 | — |
 | [DHT11](https://www.lcsc.com/product-detail/C117051.html?utm_source=digipart&utm_medium=cpc&utm_campaign=DHT11) | Humidity/Temperature sensor | 1 | $1.46 | $1.46 | [LCSC](https://www.lcsc.com/product-detail/C117051.html?utm_source=digipart&utm_medium=cpc&utm_campaign=DHT11) |
 | XIAO-ESP32-C3-SMD | — | 1 | $0.00 | $0.00 | — |
 | **Parts subtotal** | — | — | — | **$1.46** | — |
