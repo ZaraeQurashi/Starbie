@@ -16,10 +16,9 @@
 | [Conn_01x08_Pin](https://www.digikey.ca/en/products/detail/te-connectivity-amp-connectors/640445-8/27166?gclsrc=aw.ds&gad_source=1&gad_campaignid=17336435733&gbraid=0AAAAADrbLljzKpDrvxN2Yv2AzbhNSq-jD&gclid=CjwKCAjw56zWBhB0EiwAdPOQOUUE4ho-raNmsAbzyeFZDfks_igGc19CAetEuIhKovXR4pG9yX5k4hoCt2MQAvD_BwE) | Connector | 1 | $0.66 | $0.66 | [DigiKey](https://www.digikey.ca/en/products/detail/te-connectivity-amp-connectors/640445-8/27166?gclsrc=aw.ds&gad_source=1&gad_campaignid=17336435733&gbraid=0AAAAADrbLljzKpDrvxN2Yv2AzbhNSq-jD&gclid=CjwKCAjw56zWBhB0EiwAdPOQOUUE4ho-raNmsAbzyeFZDfks_igGc19CAetEuIhKovXR4pG9yX5k4hoCt2MQAvD_BwE) |
 | [10K Ohm Resistor](https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/CF14JT10K0/1741265) | Resistor | 1 | $0.11 | $0.11 | [DigiKey](https://www.digikey.ca/en/products/detail/stackpole-electronics-inc/CF14JT10K0/1741265) |
 | [SW_Push](https://www.digikey.ca/en/products/detail/te-connectivity-alcoswitch-switches/1825910-7/1731414?s=N4IgTCBcDaICoFEAEBhA9gOwwUwMYBcBLAN0PwE8kB2pARgA4wBWATloAYBaAdhAF0AvkA) | Push Button | 2 | $0.15 | $0.30 | [DigiKey](https://www.digikey.ca/en/products/detail/te-connectivity-alcoswitch-switches/1825910-7/1731414?s=N4IgTCBcDaICoFEAEBhA9gOwwUwMYBcBLAN0PwE8kB2pARgA4wBWATloAYBaAdhAF0AvkA) |
-| [DHT11](https://www.digikey.ca/en/products/detail/olimex-ltd/SNS-DHT11/21662551) | Humidity/Temperature sensor | 1 | $4.43 | $4.43 | [DigiKey](https://www.digikey.ca/en/products/detail/olimex-ltd/SNS-DHT11/21662551) |
 | [XIAO-ESP32-C3-SMD](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) | Dev board | 1 | $5.88 | $5.88 | [DigiKey](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) |
-| **Parts subtotal** | — | — | — | **$11.93** | — |
+| **Parts subtotal** | — | — | — | **$7.50** | — |
 | **Tax & shipping** | — | — | — | **$18.04** | — |
-| **Total** | — | — | — | **$29.97** | — |
+| **Total** | — | — | — | **$25.54** | — |
 
-$0.03 left of the tier's funding.
+$4.46 left of the tier's funding.
