@@ -18,7 +18,7 @@
 | [SW_Push](https://www.digikey.ca/en/products/detail/te-connectivity-alcoswitch-switches/1825910-7/1731414?s=N4IgTCBcDaICoFEAEBhA9gOwwUwMYBcBLAN0PwE8kB2pARgA4wBWATloAYBaAdhAF0AvkA) | Push Button | 2 | $0.15 | $0.30 | [DigiKey](https://www.digikey.ca/en/products/detail/te-connectivity-alcoswitch-switches/1825910-7/1731414?s=N4IgTCBcDaICoFEAEBhA9gOwwUwMYBcBLAN0PwE8kB2pARgA4wBWATloAYBaAdhAF0AvkA) |
 | [XIAO-ESP32-C3-SMD](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) | Dev board | 1 | $5.88 | $5.88 | [DigiKey](https://www.digikey.ca/en/products/detail/seeed-technology-co-ltd/113991054/16652880) |
 | **Parts subtotal** | — | — | — | **$7.50** | — |
-| **Tax & shipping** | — | — | — | **$18.04** | — |
-| **Total** | — | — | — | **$25.54** | — |
+| **Tax & shipping** | — | — | — | **$17.00** | — |
+| **Total** | — | — | — | **$24.50** | — |
 
-$4.46 left of the tier's funding.
+$5.50 left of the tier's funding.
