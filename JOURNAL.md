@@ -6,7 +6,7 @@
 > [!NOTE]
 > This devlog is mirrored from [Half Life](https://halflife.hackclub.com) ([open the project](https://halflife.hackclub.com/projects/cmuvuzkfw01po01os6ryqeq75)). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
-> A tiny motion-controlled digital pet, basically a desktop Tamagotchi. Totally not a Starboy.
+> Starbie is a custom star-shaped PCB that combines electronics, embedded programming, and a custom virtual pet based off Hollow Knight into one project. Built around the Seeed Studio XIAO ESP32-C3, Starbie features a small OLED display, motion sensing, environmental sensors, and interactive buttons that let you care for a digital pet.
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
