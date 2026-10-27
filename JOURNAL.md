@@ -10,14 +10,14 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 1 | Tier 1 | 14.4h | 4 |
+| Week 1 | Tier 1 | 15.4h | 4 |
 
 ## Contents
 
 1. [2026-10-07: Oct 7th, Starting the Starboy!!](#2026-10-07-oct-7th-starting-the-starboy)
 2. [2026-10-10: Work session](#2026-10-10-work-session)
 3. [2026-10-11: # Oct 11th, Last Day for Starbie!](#2026-10-11-oct-11th-last-day-for-starbie)
-4. [2026-10-25: # KeySync — Final Journal: Firmware, BOM, and GitHub README](#2026-10-25-keysync-final-journal-firmware-bom-and-github-rea)
+4. [2026-10-25: # KeySync — Final Revisions and Approval Feedback](#2026-10-25-keysync-final-revisions-and-approval-feedback)
 
 ## Design
 
@@ -102,77 +102,42 @@ Tldr: Finished the firmware, built the project repo including BOM and ReadMe
 
 Next thing to do: Submit the project
 
-### 2026-10-25: # KeySync — Final Journal: Firmware, BOM, and GitHub README
+### 2026-10-25: # KeySync — Final Revisions and Approval Feedback
 
-**4h**
+**5h**
 
-# KeySync — Final Journal: Firmware, BOM, and GitHub README
-October 25, 2026
+# KeySync — Final Revisions and Approval Feedback
+October 25-27, 2026
 
-Today, I focused on bringing the final parts of KeySync together: the bill of materials (BOM), Python firmware, and GitHub README. I had already completed the PCB design, including the custom board outline, component placement, routing, and seven heart-shaped capacitive touch pads inspired by UNDERTALE.
+For the last few days I focused on addressing the feedback I received before my KeySync project could be approved. There were several things that needed improvement, including the editable PCB files, firmware display dimensions, component list, PCB routing, and documentation. My goal was to make the project more accurate, complete, and easier for someone else to understand and reproduce.
 
-Although the hardware design was finished, getting the project organized took more work than I expected. I needed to make sure the component list matched the design, the firmware used the correct GPIO assignments, and the README explained the project clearly. The firmware was especially challenging because I had to work through compatibility issues before settling on a CircuitPython and KMK approach.
+### Fixing the Firmware and Bitmap Pet
 
-## 1. Building the Bill of Materials
+The first issue was that my firmware was configured for a 236 × 336 display, even though my OLED module only supports 128 × 64 pixels. This meant that the display dimensions and pet bitmap needed to be corrected. I updated the screen dimensions in the firmware by reassigning the variables as 124 for the length by 64 pixels for the width. I also replaced the oversized bitmap with a smaller 32 × 32 pixel pet sprite. Since each row of a 32-pixel-wide bitmap requires four bytes, the new sprite only needed 128 bytes of bitmap data. This made the pet suitable for the actual display resolution and reduced the amount of data the firmware needed to store.
 
-I started by creating the BOM to document the components needed to build KeySync. I went through the main parts, checked their quantities and prices, and added purchasing links so the components would be easier to source.
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/d5ba0bb6c270e8f4a5e3ae5931e0a02c0dfff81ee232d46299ea4e8028362dd9.png)
+This is a photo of the adjusted 32x32 pixel bitmap pet.
 
-My list included the XIAO ESP32-S3, an EC11 rotary encoder, ten low-profile mechanical switches, and the custom PCB from JLCPCB. I also estimated shipping costs to get a better idea of the overall project budget. Although my design only uses two mechanical pushbuttons, I included a pack of ten switches because they are purchased together.
+### Revising the PCB Layout
 
-Based on my listed prices taken from RobotShop, Amazon and JLPPCB, the components and PCB cost **$33.69**, with an estimated **$25.00 for shipping**, bringing the total to **$58.69** before any applicable taxes or additional fees. This gave me a clearer idea of the cost of building the controller and made the project easier to reproduce.
+I also revisited my PCB design in KiCad and redid the routing on the B.Cu copper layer. When building Starbie, I didn't know we could actually use the B.Cu layer so I undid all my messing routing on the F.Cu layer and then I was  needed to make sure the traces were properly routed and that the board layout was consistent with the circuit connections.
 
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/86677cb8dfcbef7cd2829c5e1e11289497dfbe94a1f921f739f60b2ddc353ed6.png)
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/f0e2f20bc77750a5fa904156d4bf096ebb9857c9bc8014bf030917fbdf6dd90d.png)
 
-## 2. Developing the CircuitPython Firmware
+### Fixing the Bill of Materials
 
-Next, I worked on the firmware using CircuitPython and KMK. The goal was to make the controls behave as intended and ensure the software matched the final GPIO assignments on my XIAO ESP32-S3.
+Another important change was correcting the BOM so that it represented the actual physical components required to build KeySync. Previously, I realized I forgot to change some of the entries which were just headers instead of the actual components that they were connect to. I updated the list to identify the actual OLED display and MPU6050 sensor modules. I also included the PCB, resistor, and keycaps, making the BOM more representative of the complete project. This made the parts list more useful for estimating costs, sourcing components, and reproducing the build.
 
-I organized the code into separate sections for input scanning, key mappings, the rotary encoder, and the KMK modules and extensions. Keeping these parts separate made the code easier to follow and helped me understand how each component contributed to the controller's behaviour.
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/c19cbf0153217356e5f93b75acc4312e1d7b716141ff6b9301a24c8495798cc0.png)
 
-The seven capacitive touch keys were assigned MIDI note numbers **60, 62, 64, 65, 67, 69, and 71**, corresponding to a C-major scale. The two mechanical switches were assigned notes **36 and 38**, intended for kick drum and snare sounds in compatible General MIDI drum mappings.
+### Updating the GitHub Repository and README
 
-For the touch keys, I created a custom `TouchScanner` class using CircuitPython's `touchio` module. It checks the state of each touch pad and compares it with its previous state. When a pad changes between touched and untouched, the scanner generates a keypad event for KMK to process. This was necessary because the heart-shaped touch pads do not behave like ordinary mechanical switches.
+Finally, I spent time reorganizing my GitHub repository to make the project files easier to navigate and ensure that everything needed for Starbie was included. During my previous upload, I had forgotten to include the Gerber fabrication files, so I made sure to add the Gerber ZIP this time alongside the editable KiCad PCB, schematic, and project files. I also reviewed the other files in the repository, including the firmware, BOM, and journal, to make the repository more complete and ensure that the actual design files were available rather than just the finished manufacturing outputs.
 
-I configured the two physical switches using KMK's `KeysScanner`, with pull-up inputs because the switches connect their GPIO pins to ground when pressed. I also configured the rotary encoder on GPIO1 and GPIO2, mapping its rotation to volume-down and volume-up commands through KMK's media-key extension.
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/9add44d56b0d1ec69f98909a6b713e5734230cd3a468a150f599e20b370aa60d.png)
 
-Finally, I connected the input scanners, MIDI module, encoder handler, and media-key extension to the main keyboard object before starting the controller with `keyboard.go()`.
+I then updated the README to better explain the project and how to use it. I added a properly formatted BOM table listing the required components, quantities, and relevant purchasing information, including the actual OLED and MPU6050 modules, the PCB, resistor, and keycaps. This makes it easier for someone to identify the parts needed to build KeySync and understand the project's hardware costs. I also added a controls section explaining how to interact with the MIDI controller, so readers can understand its functionality without having to dig through the firmware.
 
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/db4c0c71df058fe74a2ae70f79161884b41d593f5cf6b8840ce434ad0e60aa1e.png)
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/b23b294a14436bb86307cfed3c1a3c599fd4568ac9c83499759c1a282d159fbc.png)
 
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/8a20de670f0cf543f376ebb7825e6e231d04ebe20ff4129a0fff1e91faaef9d3.png)
-
-## 3. Troubleshooting the Firmware
-
-The firmware was the most challenging part of the final stage. I initially explored an Arduino-based approach, but encountered compatibility problems involving USB MIDI classes, MIDI event types, and capacitive touch functions. Code and libraries that seemed suitable in one environment did not necessarily work with the board and setup I was using.
-
-I eventually switched to CircuitPython and KMK, which meant reworking the implementation rather than simply transferring my earlier code. I had to understand how KMK handles key scanning, how the keymap translates input events into actions, and how extensions and modules provide additional functionality.
-
-Another challenge was keeping the GPIO assignments consistent. I used GPIO3–GPIO9 for the touch pads, GPIO43 and GPIO44 for the mechanical switches, and GPIO1 and GPIO2 for the encoder. I documented these assignments and organized them in the code so they could be compared against the PCB design.
-
-I also had to distinguish between MIDI controls and ordinary computer controls. The touch pads and pushbuttons use MIDI note mappings, while the rotary encoder uses media-key commands to adjust the computer's system volume. This means the encoder does not directly send MIDI Control Change messages to adjust an instrument parameter.
-
-Writing the custom touch scanner helped me better understand how input events work. Instead of repeatedly treating a held touch as a new press, the scanner tracks the previous state and only reports a change.
-
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/85f7aa49cdb6dca03a382a3daf07e9a0533f79ff1c2e00e20b2f438c24333bba.png)
-
-## 4. Writing the GitHub README
-
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/9e48a1d00ca0ac9cf40e3d2fe8b02d23be996e98b341bd8b1af5cdb93d0a2ded.png)
-
-Once the BOM and firmware were organized, I wrote the GitHub README to document KeySync from start to finish. I wanted someone visiting the repository to understand the project's purpose, its design, the components required, and how the firmware was structured.
-
-I added an introduction explaining the UNDERTALE inspiration, followed by sections covering the hardware, PCB design, controls and MIDI note mappings, firmware, and the challenges I encountered. I also included tables for the GPIO assignments and control mappings so the technical information would be easy to reference.
-
-I added images of the PCB, schematic, touch pads, mechanical switches, rotary encoder, and firmware. These visuals helped demonstrate the work more clearly than text alone, particularly the custom heart-shaped electrodes that make the design recognizable.
-
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/f0ce839c29d0771de137586de6fc6910b9e7b9cb466aa7f2cb46ad03f4f292b0.png)
-
-![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/0dcde71dd0e7e393cb23e12ae04faf446b71108e40b04420f665a31efd41af3a.png)
-
-## Final Summary
-
-KeySync brought together PCB design, programming, and creative design into a custom MIDI controller inspired by UNDERTALE.
-
-I completed the BOM, developed the CircuitPython/KMK firmware, and documented the project on GitHub, including its hardware, controls, and design process.
-
-The biggest challenge was adapting the firmware to the chosen hardware and programming environment, which gave me a better understanding of how software and electronics work together.
+![image](https://halflife.hackclub-assets.com/sessions/EgY3s8kanBhx0FNjeHxRsejCAPHT6ftU/71e93d8426cef7c811a3e811ffedffba94eb6caecedb1f8521cf6b7d764142b2.png)
