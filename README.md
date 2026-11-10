@@ -2,7 +2,7 @@
 
 Starbie is a custom star-shaped PCB that combines electronics, embedded programming, and a virtual pet into one project. Built around the **Seeed Studio XIAO ESP32-C3**, Starbie features a small OLED display, motion sensing, environmental sensors, and interactive buttons that let you care for a digital pet.
 
-<img width="447" height="407" alt="image" src="https://github.com/user-attachments/assets/f05c3183-4ddc-4669-9255-60fb202bcd05" />
+<img width="498" height="405" alt="image" src="https://github.com/user-attachments/assets/6be2bf5c-5ae9-4cae-bdc1-82b7b843f94e" />
 
 
 ##  Features
@@ -47,7 +47,8 @@ and B.CU layer.
 Finally, after the main layout was done, I added game artwork and my initials to the F.Silkscreen layer,
 which printed the graphics onto the front of the board.
 
-![Starbie PCB layout](https://github.com/user-attachments/assets/5307a7ad-fdbd-4574-a11b-9a30451945d2)
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/c8845817-2f0b-4fcb-873c-06568e0263c9" />
+
 
 ### Firmware and Digital Pet
 
@@ -160,7 +161,7 @@ The ESP32 board support package must also be installed and configured for the XI
 
 ### Manufacturing Files
 
-The repository includes the design files needed to inspect and continue editing the PCB.
+This repository includes the design files needed to continue editing the PCB.
 
 | File | Purpose |
 |---|---|
@@ -168,11 +169,9 @@ The repository includes the design files needed to inspect and continue editing 
 | `.kicad_pcb` | Editable PCB layout |
 | `.kicad_pro` | KiCad project settings |
 | Gerber files | PCB fabrication layers |
-| Drill files | Hole locations for manufacturing |
 | Firmware `.ino` | Arduino firmware |
 | `README.md` | Project documentation |
 
-The Gerber and drill files can be uploaded to a PCB manufacturer to request a board. Review the generated fabrication files before placing an order.
 
 ---
 
