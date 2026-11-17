@@ -2,7 +2,7 @@
 
 Starbie is a custom star-shaped PCB that combines electronics, embedded programming, and a virtual pet into one project. Built around the **Seeed Studio XIAO ESP32-C3**, Starbie features a small OLED display, motion sensing, environmental sensors, and interactive buttons that let you care for a digital pet.
 
-<img width="498" height="405" alt="image" src="https://github.com/user-attachments/assets/6be2bf5c-5ae9-4cae-bdc1-82b7b843f94e" />
+<img width="426" height="390" alt="image" src="https://github.com/user-attachments/assets/dd3cc425-021f-4190-93ed-ba81bd461d19" />
 
 
 ##  Features
@@ -47,7 +47,7 @@ and B.CU layer.
 Finally, after the main layout was done, I added game artwork and my initials to the F.Silkscreen layer,
 which printed the graphics onto the front of the board.
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/c8845817-2f0b-4fcb-873c-06568e0263c9" />
+<img width="452" height="393" alt="image" src="https://github.com/user-attachments/assets/2ab789e0-04d5-4612-a99f-db8079d1bed6" />
 
 
 ### Firmware and Digital Pet
